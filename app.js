@@ -2,7 +2,7 @@
    SISIJALANKOPI — app.js
    ============================================= */
  
-const WA_NUMBER = '6281234567890'; // ← Ganti nomor WA asli
+const WA_NUMBER = '6285724558521'; // ← Ganti nomor WA asli
  
 // ── MENU DATA ─────────────────────────────────────────────────────────────────
 const menuData = [
