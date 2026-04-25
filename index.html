@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sisijalankopi — Toko Kopi Di Jantung Kuningan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+ 
+  <!-- ░░ NAVBAR ░░ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="goTo('hero')">
+        <span class="nav-logo-icon">☕</span>
+        <span class="nav-logo-text">sisijalankopi</span>
+      </div>
+      <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" onclick="goTo('hero');return false;">Beranda</a></li>
+        <li><a href="#" onclick="goTo('menu');return false;">Menu</a></li>
+        <li><a href="#" onclick="goTo('addon');return false;">Add On</a></li>
+        <li><a href="#" onclick="goTo('kontak');return false;">Kontak</a></li>
+        <li>
+          <a class="nav-wa" href="https://wa.me/6285724558521" target="_blank">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Order WA
+          </a>
+        </li>
+      </ul>
+      <button class="nav-cart-btn" onclick="toggleCart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </nav>
+ 
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="hero">
+    <div class="hero-checker-top"></div>
+    <div class="hero-bg-circle c1"></div>
+    <div class="hero-bg-circle c2"></div>
+    <div class="hero-bg-circle c3"></div>
+    <div class="hero-content">
+      <div class="hero-tag">📍 Pramuka 121A · Kuningan</div>
+      <h1 class="hero-title">
+        <span class="ht-line1">sisi</span>
+        <span class="ht-line2">jalan</span>
+        <span class="ht-line3">kopi</span>
+      </h1>
+      <p class="hero-slogan">Toko Kopi Di Jantung Kuningan</p>
+      <p class="hero-sub">Melintasi Berbagai Generasi</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="goTo('menu')">Lihat Menu ↓</button>
+        <button class="btn-secondary" onclick="openCart()">🛒 Keranjang</button>
+      </div>
+    </div>
+    <div class="hero-checker-bot"></div>
+  </section>
+ 
+  <!-- ░░ MARQUEE ░░ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>☕ Signature Series</span><span>✦</span>
+      <span>🍫 Chocholate Series</span><span>✦</span>
+      <span>🍵 Tea Series</span><span>✦</span>
+      <span>🥤 Shaked Series</span><span>✦</span>
+      <span>🍽️ Cemilan</span><span>✦</span>
+      <span>🍱 Makanan Berat</span><span>✦</span>
+      <span>🍶 Botol Series</span><span>✦</span>
+      <span>☕ Signature Series</span><span>✦</span>
+      <span>🍫 Chocholate Series</span><span>✦</span>
+      <span>🍵 Tea Series</span><span>✦</span>
+      <span>🥤 Shaked Series</span><span>✦</span>
+      <span>🍽️ Cemilan</span><span>✦</span>
+      <span>🍱 Makanan Berat</span><span>✦</span>
+      <span>🍶 Botol Series</span><span>✦</span>
+    </div>
+  </div>
+ 
+  <!-- ░░ ABOUT STRIP ░░ -->
+  <div class="about-strip">
+    <div class="about-inner">
+      <div class="about-card">
+        <span class="about-icon">⏳</span>
+        <h3>Melintasi Generasi</h3>
+        <p>Kopi yang menemani berbagai generasi dengan cita rasa yang konsisten dan penuh karakter.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">📍</span>
+        <h3>Jantung Kuningan</h3>
+        <p>Berlokasi strategis di Pramuka 121A, titik ngopi favorit warga Kuningan.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">☕</span>
+        <h3>Kreasi Barista</h3>
+        <p>Setiap minuman adalah hasil kreasi barista berpengalaman dengan bahan pilihan terbaik.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">🏆</span>
+        <h3>Best Seller</h3>
+        <p>Pablo Peachcano, Es Kopi Dudu, & Cococis Masiabro jadi favorit pelanggan setia.</p>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ░░ MENU SECTION ░░ -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <div class="section-label">— Menu Pilihan —</div>
+      <h2 class="section-title">Apa yang mau kamu pesan?</h2>
+    </div>
+    <div class="tab-bar" id="tabBar"></div>
+    <div id="menuContent"></div>
+  </section>
+ 
+  <!-- ░░ ADD ON SECTION ░░ -->
+  <section class="addon-section" id="addon">
+    <div class="addon-inner">
+      <div class="addon-text">
+        <div class="section-label" style="color:var(--navy);">— Tambahan —</div>
+        <h2 class="addon-title">Add On</h2>
+        <p class="addon-desc">Sesuaikan minumanmu dengan berbagai pilihan tambahan yang bisa kamu pilih!</p>
+      </div>
+      <div class="addon-cards" id="addonCards"></div>
+    </div>
+  </section>
+ 
+  <!-- ░░ CONTACT ░░ -->
+  <section class="contact-section" id="kontak">
+    <div class="contact-checker"></div>
+    <div class="contact-inner">
+      <div class="section-label">— Temukan Kami —</div>
+      <h2 class="contact-title">Kontak & Lokasi</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Alamat</h3>
+          <p>Pramuka 121A<br>Kuningan, Jawa Barat</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📸</div>
+          <h3>Instagram</h3>
+          <p>@sisijalankopi<br>Follow untuk update menu!</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <h3>Jam Buka</h3>
+          <p>Setiap Hari<br>08.00 – 23.00 WIB</p>
+        </div>
+      </div>
+      <button class="contact-wa-btn" onclick="orderViaWA()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pesan Sekarang via WhatsApp
+      </button>
+    </div>
+  </section>
+ 
+  <!-- ░░ FOOTER ░░ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">☕ sisijalankopi</span>
+        <p>Toko Kopi Di Jantung Kuningan</p>
+        <small>Melintasi Berbagai Generasi</small>
+      </div>
+      <div class="footer-right">
+        <p>📍 Pramuka 121A, Kuningan</p>
+        <p>📸 @sisijalankopi</p>
+        <p>© 2026 Sisijalankopi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+ 
+  <!-- ░░ CART SIDEBAR ░░ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2 class="cart-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Keranjang
+      </h2>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <span>🛒</span>
+        <p>Keranjang masih kosong</p>
+        <small>Yuk tambahkan menu favoritmu!</small>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotal" class="cart-total-price">Rp 0</span>
+      </div>
+      <small class="cart-note-hint">*Belum termasuk ongkos kirim</small>
+      <div class="cart-note-wrap">
+        <label>📝 Catatan Pesanan</label>
+        <textarea id="cartNote" placeholder="Level pedas, tanpa bawang, tambah masiabro, dll..."></textarea>
+      </div>
+      <button class="cart-wa-btn" onclick="orderViaWA()">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pesan via WhatsApp
+      </button>
+      <button class="cart-clear-btn" onclick="clearCart()">Kosongkan Keranjang</button>
+    </div>
+  </aside>
+ 
+  <!-- ░░ WA FLOAT ░░ -->
+  <a class="wa-float" href="https://wa.me/6285724558521" target="_blank">
+    <span class="wa-float-label">Ngopi Sekarang!</span>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+ 
+  <!-- ░░ TOAST ░░ -->
+  <div class="toast" id="toast"></div>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
