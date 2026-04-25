@@ -402,4 +402,4 @@ document.addEventListener('DOMContentLoaded', () => {
   buildMenuContent();
   buildAddon();
   renderCart();
-})
+});
